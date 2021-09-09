@@ -1,4 +1,6 @@
 import React from "react";
+import { FaUserAlt } from "react-icons/fa";
+import { ImUnlocked } from "react-icons/im";
 import ImgWave from "./assets/images/wave.png";
 import ImgUser from "./assets/images/user.svg";
 import ImgB from "./assets/images/personalization.svg";
@@ -7,17 +9,15 @@ import {
   Container,
   Img,
   ImgBg,
-  LoginContent,
+  LoginContainer,
   Form,
   ImgAvatar,
   Title,
   InputOne,
   Icon,
-  Icon1,
   D,
   Input,
   InputPass,
-  Icon2,
   A,
   Button,
   MainContainer,
@@ -31,32 +31,32 @@ const App = () => {
         <Img>
           <ImgBg src={ImgB} alt="" />
         </Img>
-        <LoginContent>
+        <LoginContainer>
           <Form>
             <ImgAvatar src={ImgUser} alt="" />
             <Title>welcome</Title>
             <InputOne>
               <Icon>
-                <Icon1 />
+                <FaUserAlt style={{ color: "#d9d9d9" }} />
               </Icon>
               <D>
-                <h5>Username</h5>
-                <Input type="text" />
+                <Input type="text" placeholder="password" />
               </D>
             </InputOne>
             <InputPass>
               <Icon>
-                <Icon2 />
+                <ImUnlocked style={{ color: "#d9d9d9" }} />
               </Icon>
               <D>
-                <h5>Username</h5>
-                <Input type="password" />
+                <Input type="password" placeholder="password" />
               </D>
             </InputPass>
-            <A href="/">Forgot Password?</A>
-            <Button type="submit" value="Login" />
+            <A href="https://github.com/Breno44/Animated-Login">Forgot Password?</A>
+            <Button type="submit" value="Login">
+              Login
+            </Button>
           </Form>
-        </LoginContent>
+        </LoginContainer>
       </Container>
     </MainContainer>
   );
